@@ -1,0 +1,41 @@
+{
+  "name": "react-ui",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm -F docs dev",
+    "build": "pnpm -F @xuefx/ui build",
+    "lint": "oxlint .",
+    "lint:fix": "oxlint --fix .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint:eslint": "eslint .",
+    "test": "pnpm -F @xuefx/ui test",
+    "preview": "pnpm -F docs preview",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^3.4.17"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.2.0",
+    "@commitlint/config-conventional": "^21.2.0",
+    "@eslint/js": "^9.25.0",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@vitejs/plugin-react": "^4.5.2",
+    "eslint": "^9.25.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^16.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.8",
+    "oxlint": "^1.72.0",
+    "prettier": "^3.9.4",
+    "vite": "^6.3.5"
+  },
+  "packageManager": "pnpm@10.11.1"
+}

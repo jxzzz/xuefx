@@ -1,0 +1,48 @@
+{
+  "name": "@xuefx/ui-theme",
+  "version": "1.0.4",
+  "description": "Design tokens, Tailwind preset, and theming tools for @xuefx/ui",
+  "type": "module",
+  "main": "./index.ts",
+  "files": [
+    "*.ts",
+    "*.tsx",
+    "*.css"
+  ],
+  "exports": {
+    ".": {
+      "types": "./index.ts",
+      "default": "./index.ts"
+    },
+    "./tokens": {
+      "types": "./tokens.ts",
+      "default": "./tokens.ts"
+    },
+    "./tailwind-preset": {
+      "types": "./tailwind-preset.ts",
+      "default": "./tailwind-preset.ts"
+    },
+    "./styles.css": "./styles.css",
+    "./create-theme": {
+      "types": "./create-theme.ts",
+      "default": "./create-theme.ts"
+    },
+    "./ThemeProvider": {
+      "types": "./ThemeProvider.tsx",
+      "default": "./ThemeProvider.tsx"
+    },
+    "./themes": {
+      "types": "./themes.ts",
+      "default": "./themes.ts"
+    }
+  },
+  "peerDependencies": {
+    "react": ">=19.0.0"
+  },
+  "devDependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "typescript": "^6.0.3"
+  },
+  "license": "ISC"
+}

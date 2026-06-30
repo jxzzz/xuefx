@@ -1,0 +1,27 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oxc-project/oxc/main/npm/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "react", "import", "unicorn", "jsx-a11y"],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "warn",
+    "perf": "warn"
+  },
+  "rules": {
+    "no-unused-vars": "error",
+    "no-console": "warn",
+    "eqeqeq": "error",
+    "no-unassigned-import": "off",
+    "typescript/consistent-type-imports": "error",
+    "typescript/no-non-null-assertion": "off",
+    "react/jsx-key": "error",
+    "react/react-in-jsx-scope": "off",
+    "import/no-default-export": "off",
+    "unicorn/filename-case": "off"
+  },
+  "settings": {
+    "react": {
+      "runtime": "automatic"
+    }
+  },
+  "ignorePatterns": ["dist", "node_modules", "*.config.js", "*.config.ts", "test-setup.ts"]
+}

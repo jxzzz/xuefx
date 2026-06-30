@@ -1,0 +1,42 @@
+/* === Alert base === */
+.fx-alert {
+  @apply relative w-full rounded-lg border p-4;
+}
+
+.fx-alert > svg ~ * {
+  @apply pl-7;
+}
+
+.fx-alert > svg + div {
+  transform: translateY(-3px);
+}
+
+.fx-alert > svg {
+  @apply absolute left-4 top-4 text-foreground;
+}
+
+/* === Alert variants === */
+.fx-alert-default {
+  @apply bg-background text-foreground;
+}
+
+.fx-alert-destructive {
+  @apply border-destructive/50 text-destructive dark:border-destructive;
+}
+
+.fx-alert-destructive > svg {
+  @apply text-destructive;
+}
+
+/* === Alert sub-components === */
+.fx-alert-title {
+  @apply mb-1 font-medium leading-none tracking-tight;
+}
+
+.fx-alert-desc {
+  @apply text-sm;
+}
+
+.fx-alert-desc p {
+  @apply leading-relaxed;
+}
