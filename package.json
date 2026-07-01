@@ -2,7 +2,7 @@
   "name": "react-ui",
   "private": true,
   "version": "0.0.0",
-  "description": "Fable UI — React component library with built-in theming, semantic CSS, and zero-config dark mode",
+  "description": "@xuefx/ui — React component library with built-in theming, semantic CSS, and zero-config dark mode",
   "type": "module",
   "scripts": {
     "dev": "pnpm -F docs dev",

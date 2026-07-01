@@ -1,4 +1,4 @@
-# Fable UI
+# @xuefx/ui
 
 A React component library with built-in theming, semantic CSS classes, and zero-config dark mode.
 

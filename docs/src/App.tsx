@@ -79,7 +79,7 @@ export default function App() {
     <div className='docs-layout'>
       {/* ── Sidebar ── */}
       <aside className='docs-sidebar'>
-        <div className='docs-sidebar-logo'>Fable UI</div>
+        <div className='docs-sidebar-logo'>@xuefx/ui</div>
         <div className='docs-sidebar-version'>v1.0.5</div>
 
         <div className='docs-nav-section'>Getting Started</div>
