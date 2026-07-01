@@ -1,53 +1,35 @@
-/* === Button base === */
-.fx-btn {
-  @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium;
-  @apply transition-colors;
-  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
-  @apply disabled:pointer-events-none disabled:opacity-50;
+/* === Loading state (pure CSS — Tailwind cannot express keyframe animations) === */
+
+.fx-btn-loading {
+  position: relative;
+  cursor: wait;
 }
 
-.fx-btn svg {
-  @apply pointer-events-none size-4 shrink-0;
+.fx-btn-loading > *:not(.fx-btn-spinner) {
+  visibility: hidden;
 }
 
-/* === Variants === */
-.fx-btn-primary {
-  @apply bg-primary text-primary-foreground hover:bg-primary/90;
+.fx-btn-spinner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.fx-btn-destructive {
-  @apply bg-destructive text-destructive-foreground hover:bg-destructive/90;
+.fx-btn-spinner::after {
+  content: '';
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: fx-btn-spin 0.6s linear infinite;
 }
 
-.fx-btn-outline {
-  @apply border border-input bg-background hover:bg-accent hover:text-accent-foreground;
-}
-
-.fx-btn-secondary {
-  @apply bg-secondary text-secondary-foreground hover:bg-secondary/80;
-}
-
-.fx-btn-ghost {
-  @apply hover:bg-accent hover:text-accent-foreground;
-}
-
-.fx-btn-link {
-  @apply text-primary underline-offset-4 hover:underline;
-}
-
-/* === Sizes === */
-.fx-btn-md {
-  @apply h-10 px-4 py-2;
-}
-
-.fx-btn-sm {
-  @apply h-9 rounded-md px-3;
-}
-
-.fx-btn-lg {
-  @apply h-11 rounded-md px-8;
-}
-
-.fx-btn-icon {
-  @apply h-10 w-10;
+@keyframes fx-btn-spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
